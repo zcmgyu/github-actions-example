@@ -7,7 +7,7 @@ on:
         description: Bump Version
         default: v1.0.0
         required: true
-  # push:
+  push:
 
 jobs:
   bump-version:
