@@ -1,0 +1,19 @@
+name: Trigger Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Bump Version
+        default: v1.0.0
+        required: true
+  push:
+
+jobs:
+  bump-version:
+    name: Bump Package Version
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - name: Example variable usage
+        run: echo version ${{ github.event.inputs.version }}
