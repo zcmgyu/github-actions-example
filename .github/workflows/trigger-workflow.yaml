@@ -1,6 +1,7 @@
 name: Trigger Workflow
 
-on: 
+on:
+  push:
   workflow_dispatch:
     inputs:
       version:
@@ -14,4 +15,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Example variable usage
-        run: git tag ${{ github.event.inputs.version }}
+        run: echo version ${{ github.event.inputs.version }}
